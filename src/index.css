@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Chakra Petch", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #eef2f6;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Brushed metallic silver laboratory background */
+.bg-brushed-silver {
+  background-color: #eef2f7;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(14, 165, 233, 0.09), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 10%, rgba(124, 58, 237, 0.07), transparent 55%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.38) 0px,
+      rgba(255, 255, 255, 0.38) 1px,
+      rgba(203, 213, 225, 0.16) 1px,
+      rgba(203, 213, 225, 0.16) 3px
+    ),
+    linear-gradient(180deg, #f8fafc 0%, #e7edf4 55%, #dde5ef 100%);
+}
+
+/* Subtle holographic metallic card frame */
+.holo-card-shell {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(241, 247, 252, 0.94) 55%,
+    rgba(235, 245, 255, 0.95) 100%
+  );
+  box-shadow:
+    0 24px 60px -16px rgba(15, 23, 42, 0.24),
+    0 0 0 1px rgba(148, 163, 184, 0.45),
+    0 0 32px -6px rgba(6, 182, 212, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.holo-border-glow {
+  box-shadow:
+    0 0 0 1px rgba(14, 165, 233, 0.35),
+    0 8px 24px -6px rgba(6, 182, 212, 0.18);
+}
+
+/* Silver laboratory hairline grid */
+.silver-grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Subtle holographic sheen animation for specimen/card preview */
+@keyframes holo-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
+.holo-sweep-line {
+  animation: holo-sweep 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .holo-sweep-line {
+    animation: none;
+  }
+}
+
+/* Custom thin silver scrollbar for modals & mobile table */
+.silver-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.silver-scroll::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.6);
+  border-radius: 9999px;
+}
+.silver-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.75);
+  border-radius: 9999px;
+}
+.silver-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 116, 144, 0.65);
+}

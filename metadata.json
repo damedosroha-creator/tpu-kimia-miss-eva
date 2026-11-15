@@ -1,0 +1,6 @@
+{
+  "name": "Holographic Periodic Table",
+  "description": "Interactive 3D Chemistry Universe — Media pembelajaran kimia interaktif futuristik dengan tabel periodik 118 unsur lengkap, model atom dan orbital 3D, gambar realistis, serta narator suara bahasa Indonesia. Developer: Bu Eva Taida Manullang, S.Pd.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
